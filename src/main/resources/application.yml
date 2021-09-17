@@ -1,0 +1,4 @@
+
+mybatis:
+  type-aliases-package: com.lu.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
