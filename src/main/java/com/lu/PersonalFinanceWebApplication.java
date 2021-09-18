@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.lu.mapper")
-public class Springboot05MybatisApplication {
+public class PersonalFinanceWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Springboot05MybatisApplication.class, args);
+        SpringApplication.run(PersonalFinanceWebApplication.class, args);
     }
 
 }
