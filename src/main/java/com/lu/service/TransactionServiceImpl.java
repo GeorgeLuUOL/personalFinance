@@ -13,6 +13,6 @@ public class TransactionServiceImpl implements TransactionService{
     @Override
     public int addTransaction(TransactionPO transactionPO) {
          transactionMapper.addTransaction(transactionPO);
-        return 0;
+        return 1;
     }
 }
