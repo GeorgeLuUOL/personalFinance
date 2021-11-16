@@ -20,4 +20,6 @@ public interface UserMapper {
     int updateUser(User user);
 
     int deleteUser(int id);
+
+    User queryUserByName(String name);
 }

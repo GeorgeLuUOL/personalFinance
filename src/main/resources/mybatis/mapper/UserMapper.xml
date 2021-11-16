@@ -17,6 +17,9 @@
     <select id="queryUserById" resultMap="BaseResultMap">
         select * from user where user_id = #{id};
     </select>
+    <select id="queryUserByName" resultMap="BaseResultMap">
+        select * from user where user_name = #{name};
+    </select>
 
     <insert id="addUser" parameterType="User">
         insert into user (user_id, user_name, user_password,phonenumber) values (#{userId},#{userName},#{userPassWord},#{phonenumber});
