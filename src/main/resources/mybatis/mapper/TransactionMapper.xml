@@ -18,6 +18,9 @@
     <select id="queryTransactionsById" resultMap="BaseResultMap">
         select * from transaction where transaction_id = #{transactionId};
     </select>
+    <select id="selectTransactionByAccountId" resultMap="BaseResultMap">
+        select * from transaction where user_account_id = #{accountId};
+    </select>
 
     <insert id="addTransaction" parameterType="TransactionPo">
         insert into transaction (transaction_id,user_account_id, transaction_type, amount,transaction_time)

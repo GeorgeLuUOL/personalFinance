@@ -36,15 +36,11 @@ public class ShiroConfig {
 
 
         //授权，正常情况下，没有授权会跳转到为授权页面
-        filterMap.put("/user/add","perms[user:add]");
-        filterMap.put("/user/update","perms[user:update]");
-
         filterMap.put("/user/*","authc");
-
         bean.setFilterChainDefinitionMap(filterMap);
 
         //设置登录的请求
-        bean.setLoginUrl("/doLogin");
+        bean.setLoginUrl("/login");
 
         //为授权页面
         bean.setUnauthorizedUrl("/noauto");

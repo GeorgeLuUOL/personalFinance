@@ -8,4 +8,5 @@ public interface UserAccountService {
     int executeTransaction(TransactionPO transactionPO);
 
     int addAccount(UserAccountPO userAccountPO);
+
 }

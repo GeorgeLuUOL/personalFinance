@@ -7,10 +7,9 @@ import com.lu.service.UserAccountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/transaction")
@@ -32,5 +31,10 @@ public class TransactionController {
         }
         transactionService.addTransaction(transactionPO);
     return "add transaction completed";
+    }
+
+    @GetMapping("/getTransaction")
+    public List<TransactionPO> getTransaction(@RequestParam Long userAccountId){
+        return transactionService.selectTransactionByAccountId(userAccountId);
     }
 }
