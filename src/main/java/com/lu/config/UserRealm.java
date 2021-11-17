@@ -10,11 +10,13 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 //自定义的UserRealm
 public class UserRealm extends AuthorizingRealm {
-
+    private Logger logger= LoggerFactory.getLogger(getClass());;
     @Autowired
     UserService userService;
     //授权

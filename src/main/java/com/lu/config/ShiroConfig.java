@@ -36,7 +36,8 @@ public class ShiroConfig {
 
 
         //授权，正常情况下，没有授权会跳转到为授权页面
-        filterMap.put("/user/*","authc");
+        filterMap.put("/user/**","authc");
+        filterMap.put("/transaction/**","authc");
         bean.setFilterChainDefinitionMap(filterMap);
 
         //设置登录的请求
