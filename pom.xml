@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>nuc.ss</groupId>
-    <artifactId>springboot-05-mybatis</artifactId>
+    <groupId>com.lu</groupId>
+    <artifactId>personalFinance</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-05-mybatis</name>
+    <name>personal-finance</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -41,7 +41,7 @@
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
-            <version>1.4.0</version>
+            <version>1.7.1</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -94,17 +94,21 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- 设置启动入口 -->
+                <!-- manClass即使不配置 , SprinBoot也在打包的时候也清楚入口是哪个 , 其实不用配置 -->
+
+                <configuration>
+                    <mainClass>com.lu.PersonalFinanceWebApplication</mainClass>
+                </configuration>
+                <executions>
+                 <execution>
+                 <goals>
+                    <goal>repackage</goal>
+               </goals>
+                 </execution>
+               </executions>
             </plugin>
         </plugins>
     </build>

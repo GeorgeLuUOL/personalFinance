@@ -30,7 +30,7 @@ public class ShiroConfig {
          */
 
         //拦截
-        Map<String, String> filterMap = new LinkedHashMap<>();
+        Map<String, String> filterMap = new LinkedHashMap();
         //filterMap.put("/user/add","authc");
         //filterMap.put("/user/update","authc");
 
