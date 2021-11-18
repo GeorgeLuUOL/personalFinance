@@ -25,9 +25,6 @@ public class UserRealm extends AuthorizingRealm {
         System.out.println("执行了=>授权doGetAuthorizationInfo");
 
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-
-        //info.addStringPermission("user:add");
-
         //拿到当前登录的这个对象
         Subject subject = SecurityUtils.getSubject();
         User currentUser = (User)subject.getPrincipal();//拿到user对象

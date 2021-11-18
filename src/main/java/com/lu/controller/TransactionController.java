@@ -4,6 +4,7 @@ import com.lu.pojo.TransactionPO;
 import com.lu.pojo.User;
 import com.lu.service.TransactionService;
 import com.lu.service.UserAccountService;
+import com.lu.utils.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,7 @@ public class TransactionController {
 
     @GetMapping("/getTransaction")
     public List<TransactionPO> getTransaction(@RequestParam Long userAccountId){
+        logger.info("当前用户是{}",SecurityUtils.getUser());
         return transactionService.selectTransactionByAccountId(userAccountId);
     }
 }
