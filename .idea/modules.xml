@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/springboot-05-mybatis.iml" filepath="$PROJECT_DIR$/springboot-05-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/async/async.iml" filepath="$PROJECT_DIR$/async/async.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personalFinance.iml" filepath="$PROJECT_DIR$/personalFinance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personalFinance-web/personalFinance-web.iml" filepath="$PROJECT_DIR$/personalFinance-web/personalFinance-web.iml" />
     </modules>
   </component>
 </project>

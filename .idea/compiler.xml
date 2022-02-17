@@ -7,11 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-05-mybatis" />
+        <module name="async" />
+        <module name="personalFinance-web" />
+        <module name="personalFinance" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springboot-05-mybatis" target="1.5" />
+      <module name="async" target="1.8" />
+      <module name="personalFinance" target="1.5" />
+      <module name="personalFinance-web" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="async" options="-parameters" />
+      <module name="personalFinance-web" options="" />
+    </option>
   </component>
 </project>
