@@ -15,7 +15,7 @@
     <bytecodeTargetLevel target="8">
       <module name="async" target="1.5" />
       <module name="personalFinance" target="1.5" />
-      <module name="personalFinance-web" target="1.5" />
+      <module name="personalFinance-web" target="6" />
       <module name="quartz-job" target="6" />
     </bytecodeTargetLevel>
   </component>

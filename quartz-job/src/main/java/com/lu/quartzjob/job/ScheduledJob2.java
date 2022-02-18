@@ -17,7 +17,7 @@ public class ScheduledJob2 implements Job {
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-        System.out.println("CRON ----> schedule job2 is running ... + " + name + "  ---->  " + dateFormat.format(new Date()));
+        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-DD HH:mm:ss");
+        System.out.println("当前时间是 " + dateFormat.format(new Date()));
     }
 }
