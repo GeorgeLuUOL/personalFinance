@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.lu.mapper.AccountMapper">
+    <resultMap id="BaseResultMap" type="com.lu.pojo.UserAccountPO">
+        <result column="user_account_id" jdbcType="INTEGER" property="userAccountId" />
+        <result column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="user_account_name" jdbcType="VARCHAR" property="userAccountName" />
+        <result column="balance" jdbcType="BIGINT" property="balance" />
+        <result column="loan" jdbcType="BIGINT" property="loan" />
+        <result column="create_date" jdbcType="DATE" property="createDate" />
+    </resultMap>
+    <select id="queryAccountById" resultMap="BaseResultMap">
+        select * from user_account where user_account_id = #{userAccountId};
+    </select>
+
+    <select id="queryAccountByUserId" resultMap="BaseResultMap">
+        select * from user_account where user_id = #{userId};
+    </select>
+
+    <update id="addToBalance" parameterType="map">
+        update user_account set balance=balance + #{amount} where user_account_id = #{userAccountId}
+    </update>
+
+    <update id="subtractToBalance" parameterType="map">
+        update user_account set balance=balance - #{amount} where user_account_id = #{userAccountId}
+    </update>
+
+    <update id="addToLoan" parameterType="map">
+        update user_account set loan=loan + #{amount} where user_account_id = #{userAccountId}
+    </update>
+
+    <update id="subtractToLoan" parameterType="map">
+        update user_account set loan=loan - #{amount} where user_account_id = #{userAccountId}
+    </update>
+
+    <insert id="addAccount" parameterType="userAccountPO">
+        insert into user_account (user_account_id,user_account_name, user_id, balance,loan,create_date)
+        values (#{userAccountId},#{userAccountName},#{userId},#{balance},#{loan},#{createDate});
+    </insert>
+
+
+</mapper>

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/async/async.iml" filepath="$PROJECT_DIR$/async/async.iml" />
       <module fileurl="file://$PROJECT_DIR$/personalFinance.iml" filepath="$PROJECT_DIR$/personalFinance.iml" />
       <module fileurl="file://$PROJECT_DIR$/personalFinance-web/personalFinance-web.iml" filepath="$PROJECT_DIR$/personalFinance-web/personalFinance-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quartz-job/quartz-job.iml" filepath="$PROJECT_DIR$/quartz-job/quartz-job.iml" />
     </modules>
   </component>
 </project>

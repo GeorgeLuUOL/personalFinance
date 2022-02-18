@@ -7,7 +7,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>personal-finance</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>async</module>
+        <module>personalFinance-web</module>
+        <module>quartz-job</module>
 
+    </modules>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -92,6 +98,12 @@
     </dependencyManagement>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

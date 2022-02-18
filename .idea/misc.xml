@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/async/pom.xml" />
         <option value="$PROJECT_DIR$/personalFinance-web/pom.xml" />
+        <option value="$PROJECT_DIR$/quartz-job/pom.xml" />
       </list>
     </option>
   </component>

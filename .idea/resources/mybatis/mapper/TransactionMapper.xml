@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.lu.mapper.TransactionMapper">
+    <resultMap id="BaseResultMap" type="com.lu.pojo.TransactionPO">
+        <result column="transaction_id" jdbcType="INTEGER" property="transactionId" />
+        <result column="user_account_id" jdbcType="INTEGER" property="userAccountId" />
+        <result column="transaction_type" jdbcType="TINYINT" property="transactionType" />
+        <result column="amount" jdbcType="BIGINT" property="amount" />
+        <result column="transaction_time" jdbcType="TIME" property="transactionTime" />
+    </resultMap>
+    <select id="queryTransactionsByAccountId" resultMap="BaseResultMap">
+        select * from transaction where user_account_id = #{userAccountId};
+    </select>
+
+    <select id="queryTransactionsById" resultMap="BaseResultMap">
+        select * from transaction where transaction_id = #{transactionId};
+    </select>
+    <select id="selectTransactionByAccountId" resultMap="BaseResultMap">
+        select * from transaction where user_account_id = #{accountId};
+    </select>
+
+    <insert id="addTransaction" parameterType="TransactionPo">
+        insert into transaction (transaction_id,user_account_id, transaction_type, amount,transaction_time)
+         values (#{transactionId},#{userAccountId},#{transactionType},#{amount},#{transactionTime});
+    </insert>
+
+
+</mapper>

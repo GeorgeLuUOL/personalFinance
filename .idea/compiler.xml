@@ -9,19 +9,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="async" />
         <module name="personalFinance-web" />
-        <module name="personalFinance" />
+        <module name="quartz-job" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="async" target="1.8" />
+    <bytecodeTargetLevel target="8">
+      <module name="async" target="1.5" />
       <module name="personalFinance" target="1.5" />
       <module name="personalFinance-web" target="1.5" />
+      <module name="quartz-job" target="6" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="async" options="-parameters" />
+      <module name="async" options="" />
       <module name="personalFinance-web" options="" />
+      <module name="quartz-job" options="" />
     </option>
   </component>
 </project>
